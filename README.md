@@ -23,7 +23,9 @@ imshrinker [c[bpp]|d] [file_in] [file_out]
 ```
 
 Where:
+
  c[bpp] - compress with bit rate bpp (default: bpp = 0.5)
+
  d      - decompress
 
 Example:
@@ -33,6 +35,7 @@ imshrinker d image.ims image_new.ppm
 ```
 
 This will compress the file image.ppm with the bitrate of 0.1 bpp and then decompress it back.
+
 The application supports raw grayscale and raw color images (PGM, PPM) as and input file. You can convert any image to the PGM or PPM format in GIMP.
 
 Benchmark
