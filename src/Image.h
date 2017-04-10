@@ -9,6 +9,9 @@
 
 #include <stddef.h>
 
+#define HD_WIDTH 1920
+#define HD_HEIGHT 1080
+
 class Image {
     /* we use the YCbCr color model; for grayscale images use only the Y component */
     float* Y;
@@ -31,6 +34,7 @@ public:
     bool is_color() { return (Cb != NULL); }
     float& at(int component, int x, int y);  /* component = 0 for Y, 1 for Cb, 2 for Cr */
     void load(char* fname, int* num_stages);
+    void load_v210(char* fname, int* num_stages);
     void save(char* fname);
 };
 
